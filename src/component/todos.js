@@ -13,8 +13,8 @@ import { Card, CardContent, Grid } from "@mui/material";
 
 
 const Todos = ({ todos, deleteTodo }) => {
-  const todoList = todos.length ? (
-    todos.map((todo) => {
+  const todoList = todos.length ? ( //ternary operator start.
+    todos.map((todo) => { //if length != 0, return the todo.map with its components.
       return (
         <Grid key={todo.id}>
           <Card>
@@ -29,7 +29,7 @@ const Todos = ({ todos, deleteTodo }) => {
         </Grid>
       );
     })
-  ) : (
+  ) : ( //if length == 0, just print that there are no todos
     <p>You have no todo's left </p>
   );
   // Lastly, return the todoList constant that we created above to show all of the items on the screen.
